@@ -1,0 +1,164 @@
+body {
+    background-color: #000000;
+    max-width: 100%;
+    margin: 0 auto;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    font-size: 18px;
+}
+
+.menu a {
+    color: #ffffff;
+}
+
+.meio1 {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url('Imagem - Cima.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #ffffff;
+}
+
+.overlay h1 {
+    font-size: 66px;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.overlay .cadastrar {
+    background-color: #306CB4;;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.meio1, .meio2, .meio3 {
+    max-width: 100%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.meio2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+
+.meio3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-image: url('Imagem - Baixo.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.meio3 h2, label, input, button{
+    margin-left: 10%;
+    margin-bottom: 1%;
+}
+
+.meio3 h2{
+    font-size: 350%;
+}
+
+.meio3 label{
+    font-size: 200%;
+}
+
+.meio3 input{
+    font-size: 150%;
+}
+
+.meio3 button{
+    font-size: 150%;
+}
+
+.botao{
+    background-color: #306CB4;;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.bosses {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28px;
+    margin: 20px 4%;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .meio2 {
+        flex-direction: column;
+    }
+
+    .social {
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,40 @@
+body{
+    background-image: url(fundo.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10%;
+    background-color: rgb(25, 209, 255);
+    width: 40%;
+    height: 50vh;
+    box-shadow: 10px 5px 5px rgb(0, 129, 214);
+}
+
+h1{
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+label{
+    font-family: "Mukta", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+input{
+    color: rgb(0, 0, 0);
+    background-color: rgb(180, 219, 255);
+}
+
+button{
+    color: #000000;
+    background-color: rgb(229, 255, 0);
+}

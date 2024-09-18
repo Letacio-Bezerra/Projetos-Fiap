@@ -1,0 +1,61 @@
+h1{
+    font-family: "Archivo Narrow", sans-serif;   
+    font-optical-sizing: auto;   
+    font-weight: weight;   
+    font-style: normal;
+}
+
+ul, h2{
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 450;
+    font-style: normal;
+}
+
+img{
+    width: 22%;
+    height: auto;
+}
+
+body{
+    background-color: azure;
+}
+
+.pikachu{
+    color: rgb(185, 185, 5);
+}
+
+.tipoEletrico{
+    color:rgb(202, 202, 82)
+}
+
+.charmander{
+    color: #f24f00;
+}
+
+.tipoFogo{
+    color: red;
+}
+
+.squirtle{
+    color: rgb(4, 228, 228);
+}
+
+.tipoAgua{
+    color: blue;
+}
+
+.bulbasaur{
+    color: green;
+}
+
+.tipoPlanta{
+    color: rgb(125, 206, 4);
+}
+
+.eevee{
+    color: brown;
+}
+
+.tipoNormal{
+    color: burlywood;
+}

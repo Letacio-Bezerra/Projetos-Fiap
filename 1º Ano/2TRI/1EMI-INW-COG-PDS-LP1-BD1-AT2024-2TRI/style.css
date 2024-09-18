@@ -1,0 +1,73 @@
+body {
+    background-color: rgba(218, 206, 254, 1);
+
+}
+
+header {
+    padding: 3%;
+    color: white;
+    background-color: rgba(93, 76, 173, 1);
+    flex: 0 1 auto;
+
+}
+
+.topo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    gap: 31px;
+}
+
+.logo {
+    width: 96px;
+    height: 80.1px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 3%;
+    color: white;
+    background-color: rgba(93, 76, 173, 1);
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    flex: 1 1 0;
+    min-width: 150px;
+    max-width: 300px;
+    height: 100%;
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(158, 230, 246, 1);
+}
+
+.card img {
+    border: 2px solid black;
+    width: 100%;
+    height: auto;
+}
+
+h3 {
+    color: rgba(93, 76, 173, 1);
+}
+
+.noticias, .categorias{
+    margin: 1%;
+}
+
+.arte{
+    width: 100%;
+}

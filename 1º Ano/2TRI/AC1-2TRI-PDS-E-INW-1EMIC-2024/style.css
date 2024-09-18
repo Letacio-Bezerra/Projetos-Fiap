@@ -1,0 +1,41 @@
+#header{
+    display: flex;
+    background-color: blueviolet;
+    height: 15vh;
+    max-width: 100%;
+}
+
+#meio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+
+.nav1{
+    flex: 1;
+    background-color: rgb(43, 226, 113);
+    height: 67vh;
+    max-width: 10%;
+}
+
+.main{
+    flex: 2;
+    background-color: aqua;
+    height: 67vh;
+    max-width: 70%;
+}
+
+.nav2{
+    flex: 3;
+    background-color: rgb(141, 226, 43);
+    height: 67vh;
+    max-width: 10%;
+}
+
+#footer{
+    display: flex;
+    background-color: blueviolet;
+    height: 15vh;
+    max-width: 100%;
+}
