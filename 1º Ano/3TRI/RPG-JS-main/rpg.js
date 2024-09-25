@@ -14,6 +14,11 @@ const consequenciasCadeia = [
     'Você provou sua habilidade de furtivida e conseguiu escapar sem ser percebido, mas conseguirá fugir por quanto tempo?'    
 ]
 
+const armadilhaFlorestaC = [
+    'Você não conseguiu desviar e teve sua perna decepada. Após isso o VOLIBA te encontra e te devora.',
+    'Você desvia da armadilha.'
+]
+
 //************************************* Funções que serão repetidas ao longo do jogo *************************************
 
   // Função para rolar um dado (1 a 20)
@@ -327,6 +332,9 @@ function iniciarJornadaArqueiro(){
             }
             else {alert ( `${consequenciasCadeia[3]}`) }
         }
+        if (vivo) {
+            continuarAventuraMago();
+        }
         else{
             alert(`Se ainda não está preparado, volte mais tarde.`)
             return
@@ -362,6 +370,9 @@ function iniciarJornadaGuerreiro(){
             }
             else {alert ( `${consequenciasCadeia[3]}`) }
         }
+        if (vivo) {
+            continuarAventuraMago();
+        }
         else{
             alert(`Se ainda não está preparado, volte mais tarde.`)
             return
@@ -393,8 +404,7 @@ function iniciarJornadaMago(){
             }
             else {alert ( `${consequenciasCadeia[3]}`) }
         }
-
-        if (sobrevivente) {
+        if (vivo) {
             continuarAventuraMago();
         }
         else{
@@ -409,5 +419,54 @@ function iniciarJornadaMago(){
 }
 
 function continuarAventuraMago(){
+    const escolhaCaminho = prompt(`Você conseguiu escapar da cadeia com sucesso pra onde irá agora?
+    1 - Cidade
+    2 - Floresta
+    3 - Se vingar`)
+    if (escolhaCaminho == "1"){
+        CidadeMago()
+    }
+    else if (escolhaCaminho == "2"){
+        encontraArmadilhaFloresta()
+    }
+    else if (escolhaCaminho == "3"){
+        VingançaMago()
+    }
+    else{
+        alert(`Se ainda não está preparado, volte mais tarde.`)
+        return
+    }
+}
+
+function FlorestaMago(){
+    const armadilhaFloresta = prompt(`Você encontra uma armadilha de VOLIBA. Você desvia dela?
+        1 - Tento desviar
+        2 - Não tento desviar`)
+    if(armadilhaFloresta == "1"){
+        const rolarDados = confirm("Agora vamos ver se você é capaz!")
+        if(rolarDados === true){
+            sorteioDado = rolarDado()
+            alert(`O número sorteado foi ${sorteioDado}!`)
+            if(sorteioDado >= 0 && sorteioDado <= 5) { 
+                alert ( `${armadilhaFlorestaC[0]}`)
+                vivo = false
+            }
+            else {alert ( `${armadilhaFlorestaC[1]}`) }
+        }
+        if (vivo) {
+            FlorestaMagoP2();
+        }
+        else{
+            alert(`Se ainda não está preparado, volte mais tarde.`)
+            return
+        }
+    }
+    else{
+        alert(`Enviar para outras aventuras....`)
+        return
+    }
+}
+
+function FlorestaMagoP2(){
     
 }
