@@ -4,6 +4,8 @@
 let personagemPrincipal = ""
 //variável que irá guardar o número sorteado no dado
 let sorteioDado = 0
+//variavel para saber se o personagem tá vivo
+let vivo = true
 //variável que irá guardar a consequência de cada número sorteado no desafio da caverna
 const consequenciasCadeia = [
     'Você não tomou cuidado e todos os guardas da prisão estão indo te espancar até a morte.',
@@ -42,11 +44,20 @@ const consequenciasCadeia = [
             alert("Empate! Nada acontece.")
         }
     }
+
     if(vidaPersonagem <= 0){
         alert("Você morreu! O jogo acabou.")
     }
     else{
         alert("Você sobreviveu! Agora a história continua....")
+    }
+
+    if (vidaPersonagem <= 0) {
+        vivo = false;
+        return;
+    } else {
+        vivo = true;
+        return;
     }
 }
 
@@ -81,6 +92,14 @@ const consequenciasCadeia = [
         else{
             alert("Você sobreviveu! Agora a história continua....")
         }
+
+        if (vidaPersonagem <= 0) {
+            vivo = false;
+            return;
+        } else {
+            vivo = true;
+            return;
+        }
 }
 
     // Função para batalha de nível difiil
@@ -113,6 +132,14 @@ const consequenciasCadeia = [
         }
         else{
             alert("Você sobreviveu! Agora a história continua....")
+        }
+
+        if (vidaPersonagem <= 0) {
+            vivo = false;
+            return;
+        } else {
+            vivo = true;
+            return;
         }
 }
 
@@ -147,6 +174,14 @@ const consequenciasCadeia = [
     else{
         alert("Você sobreviveu! Agora a história continua....")
     }
+
+    if (vidaPersonagem <= 0) {
+        vivo = false;
+        return;
+    } else {
+        vivo = true;
+        return;
+    }
 }
 
     // Função para batalha de nível médio
@@ -179,6 +214,14 @@ const consequenciasCadeia = [
         }
         else{
             alert("Você sobreviveu! Agora a história continua....")
+        }
+
+        if (vidaPersonagem <= 0) {
+            vivo = false;
+            return;
+        } else {
+            vivo = true;
+            return;
         }
 }
 
@@ -213,7 +256,13 @@ const consequenciasCadeia = [
             alert("Como você sobreviveu?")
         }
 
-
+        if (vidaPersonagem <= 0) {
+            vivo = false;
+            return;
+        } else {
+            vivo = true;
+            return;
+        }
 }
 
 //************************************* Função que roda ao iniciar o jogo *************************************
@@ -344,6 +393,10 @@ function iniciarJornadaMago(){
             }
             else {alert ( `${consequenciasCadeia[3]}`) }
         }
+
+        if (sobrevivente) {
+            continuarAventuraMago();
+        }
         else{
             alert(`Se ainda não está preparado, volte mais tarde.`)
             return
@@ -353,4 +406,8 @@ function iniciarJornadaMago(){
         alert(`Enviar para outras aventuras....`)
         return
     }
+}
+
+function continuarAventuraMago(){
+    
 }
