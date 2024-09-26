@@ -421,12 +421,9 @@ function iniciarJornadaMago() {
     }
     if (vivo) {
       continuarAventuraMago();
-    } else {
-      alert(`Se ainda não está preparado, volte mais tarde.`);
-      return;
     }
   } else {
-    alert(`Enviar para outras aventuras....`);
+    alert(`Você morreu de velhice na prisão`);
     return;
   }
 }
@@ -481,7 +478,7 @@ function FlorestaMago() {
       FlorestaMagoP2();
     }
   } else {
-    alert(`Enviar para outras aventuras....`);
+    alert(`Você morreu!`);
     return;
   }
 }
@@ -527,7 +524,8 @@ function encontroVoliba() {
     if (lutaVoliba == "1") {
       alert("Agora vamos ver se você é capaz!");
       batalhaDificilMV();
-    } else if (lutaVoliba == "2") {
+    }
+    else if (lutaVoliba == "2") {
       const rolarDados = confirm("Agora vamos ver se você é capaz!");
       if (rolarDados === true) {
         sorteioDado = rolarDado();

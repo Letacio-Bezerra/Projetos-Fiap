@@ -39,3 +39,15 @@ body {
   border-radius: 5px;
   display: none;
 }
+
+.voliba{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+}
+
+img {
+  width: 50%;
+  height: 50vh;
+}
