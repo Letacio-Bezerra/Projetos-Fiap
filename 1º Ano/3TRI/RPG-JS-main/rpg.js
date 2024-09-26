@@ -30,6 +30,8 @@ const VolibaC = [
   "Você conseguiu sair, muito bem! Está livre agora.",
 ];
 
+const CaraCoroa = ["Cara", "Coroa"];
+
 //************************************* Funções que serão repetidas ao longo do jogo *************************************
 
 // Função para rolar um dado (1 a 20)
@@ -398,7 +400,8 @@ function iniciarJornadaGuerreiro() {
   }
 }
 
-// Função para iniciar a jornada do mago
+//************************************* Função para iniciar a jornada do mago *************************************
+
 function iniciarJornadaMago() {
   const opcao1 =
     prompt(`Você está preso por ser um criminoso muito procurado. O que você faz?
@@ -428,6 +431,8 @@ function iniciarJornadaMago() {
   }
 }
 
+//************************************* Função para iniciar escolher a jornada *************************************
+
 function continuarAventuraMago() {
   const escolhaCaminho =
     prompt(`Você conseguiu escapar da cadeia com sucesso pra onde irá agora?
@@ -439,12 +444,14 @@ function continuarAventuraMago() {
   } else if (escolhaCaminho == "2") {
     encontraArmadilhaFloresta();
   } else if (escolhaCaminho == "3") {
-    VingançaMago();
+    vingancaMago();
   } else {
     alert(`Se ainda não está preparado, volte mais tarde.`);
     return;
   }
 }
+
+//************************************* Função para iniciar a jornada do mago na floresta *************************************
 
 function encontraArmadilhaFloresta() {
   sorteioDado = rolarDado();
@@ -524,8 +531,7 @@ function encontroVoliba() {
     if (lutaVoliba == "1") {
       alert("Agora vamos ver se você é capaz!");
       batalhaDificilMV();
-    }
-    else if (lutaVoliba == "2") {
+    } else if (lutaVoliba == "2") {
       const rolarDados = confirm("Agora vamos ver se você é capaz!");
       if (rolarDados === true) {
         sorteioDado = rolarDado();
@@ -540,5 +546,79 @@ function encontroVoliba() {
     }
   } else {
     alert(`Você sai da floresta e está livre.`);
+  }
+}
+
+//************************************* Função para iniciar a jornada do mago na vingança *************************************
+
+function vingancaMago() {
+  const inicioVinganca =
+    prompt(`Com raiva de quem te prendeu, você decide se vingar?
+        1 - Vou até a casa dele
+        2 - Vou só fugir mesmo`);
+  if (inicioVinganca == "1") {
+    alert(
+      "Você vai até a casa dele para sequestrar a família dele, mas o cachorro dele sabe lutar karate!"
+    );
+    batalhaFacilM();
+    if (vivo) {
+      vingancaMago2();
+    }
+  } else {
+    alert(`Você escapou!`);
+    return;
+  }
+}
+
+function vingancaMago2() {
+  const vingancaMagoRato =
+    prompt(`Após matar o cachorro que sabe lutar karate você decide procurar o guarda que te prendeu mas no meio do caminho você encontra um rato bonitinho e fofinho, MAS ELE TEM UM MACHADO GIGANTE e sabe lutar karate e ele vai proteger seu dono por tudo... o cachorro, sim, o cachorro é o dono do rato que sabe luta karate
+        1 - Você luta
+        2 - Você desiste`);
+  if (vingancaMagoRato == "1") {
+    batalhaMediaM();
+    if (vivo) {
+      vingancaGuarda();
+    }
+  } else {
+    alert(`Você foi humilhado por um rato, muito bem!`);
+    return;
+  }
+}
+
+function gerarCaraCoroa() {
+  const gerarCaraCoroa = Math.floor(Math.random() * CaraCoroa.length);
+  return CaraCoroa[gerarCaraCoroa];
+}
+
+function vingancaGuarda() {
+  const vingancaGuardaCC =
+    prompt(`Depois de passar pelo rato você encontra o guarda, que estava tomando sorvete e ele te percebe, mas ele tem um truque na manga... ELE SABE LUTAR KARATE! E mesmo assim ele te pede pra você escolher entre cara ou corou.
+        1 - Luto do mesmo jeito
+        2 - Escolho entre cara ou coroa`);
+  if (vingancaGuardaCC == "1") {
+    batalhaMediaM();
+    if (vivo) {
+      alert("Você se vinga com sucesso, parabéns!");
+      return;
+    }
+  } else if (vingancaGuardaCC == "2") {
+    const escolhaCaraCoroa = prompt(`Escolha entre Caro ou Coroa
+      1 - Cara
+      2 - Coroa
+      (Escreva: "Cara" ou "Coroa" sem as "" mas do mesmo jeito)`);
+    const resultadoCaraCoroa = gerarCaraCoroa();
+    alert(`O resultado foi ${resultadoCaraCoroa}!`);
+
+    if (resultadoCaraCoroa === escolhaCaraCoroa) {
+      alert(
+        "O guarda corta a cabeça dele com a moeda e vc se vinga com sucesso, parabéns!"
+      );
+    } else {
+      alert("O voliba aparece e você agora tem que lutar com ele!");
+      batalhaDificilMV();
+    }
+  } else {
+    alert("Então você morre.");
   }
 }
