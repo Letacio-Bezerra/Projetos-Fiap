@@ -353,7 +353,7 @@ function iniciarJornadaArqueiro() {
       }
     }
     if (vivo) {
-      continuarAventuraMago();
+      continuarAventura();
     } else {
       alert(`Se ainda não está preparado, volte mais tarde.`);
       return;
@@ -389,7 +389,7 @@ function iniciarJornadaGuerreiro() {
       }
     }
     if (vivo) {
-      continuarAventuraMago();
+      continuarAventura();
     } else {
       alert(`Se ainda não está preparado, volte mais tarde.`);
       return;
@@ -397,6 +397,193 @@ function iniciarJornadaGuerreiro() {
   } else {
     alert(`Enviar para outras aventuras....`);
     return;
+  }
+}
+
+//************************************* Função para iniciar escolher a jornada do Guerreiro e Arqueiro *************************************
+
+function continuarAventura() {
+  const escolhaCaminho =
+    prompt(`Você conseguiu escapar da cadeia com sucesso pra onde irá agora?
+    1 - Cidade
+    2 - Floresta
+    3 - Se vingar`);
+  if (escolhaCaminho == "1") {
+    cidade();
+  } else if (escolhaCaminho == "2") {
+    encontraArmadilhaFlorestaGA();
+  } else if (escolhaCaminho == "3") {
+    vinganca();
+  } else {
+    alert(`Se ainda não está preparado, volte mais tarde.`);
+    return;
+  }
+}
+
+//************************************* Função para iniciar a jornada na floresta do Guerreiro e Arqueiro *************************************
+
+function encontraArmadilhaFlorestaGA() {
+  sorteioDado = rolarDado();
+  alert(`Você está andando pela floresta, será que encontra alguma coisa?`);
+  alert(`O número sorteado foi ${sorteioDado}!`);
+  if (sorteioDado >= 0 && sorteioDado <= 10) {
+    floresta();
+  } else {
+    florestaP2();
+  }
+}
+
+function floresta() {
+  const armadilhaFloresta =
+    prompt(`Você encontra uma armadilha de VOLIBA. Você desvia dela?
+        1 - Tento desviar
+        2 - Não tento desviar`);
+  if (armadilhaFloresta == "1") {
+    const rolarDados = confirm("Agora vamos ver se você é capaz!");
+    if (rolarDados === true) {
+      sorteioDado = rolarDado();
+      alert(`O número sorteado foi ${sorteioDado}!`);
+      if (sorteioDado >= 0 && sorteioDado <= 10) {
+        alert(`${armadilhaFlorestaC[0]}`);
+        vivo = false;
+      } else {
+        alert(`${armadilhaFlorestaC[1]}`);
+      }
+    }
+    if (vivo) {
+      florestaP2();
+    }
+  } else {
+    alert(`Você morreu!`);
+    return;
+  }
+}
+
+function florestaP2() {
+  const florestaFome =
+    prompt(`Você encontra um ninho de gaviões míticos, onde pode comer os ovos dele. Vai tentar?
+        1 - Tento comer os ovos de gaviões
+        2 - Continuar com fome`);
+  if (florestaFome == "1") {
+    const rolarDados = confirm("Agora vamos ver se você é capaz!");
+    if (rolarDados === true) {
+      sorteioDado = rolarDado();
+      alert(`O número sorteado foi ${sorteioDado}!`);
+      if (sorteioDado >= 0 && sorteioDado <= 8) {
+        alert(`${florestaFomeC[0]}`);
+        batalhaDificil();
+      } else if (sorteioDado >= 9 && sorteioDado <= 17) {
+        alert(`${florestaFomeC[1]}`);
+        batalhaFacil();
+      } else {
+        alert(`${florestaFomeC[2]}`);
+      }
+    }
+    if (vivo) {
+      encontroVolibaGA();
+    }
+  } else {
+    alert(encontroVolibaGA());
+  }
+}
+
+function encontroVolibaGA() {
+  const voliba =
+    prompt(`Você encontra uma caverna e sente algo poderoso vindo dela, tem coragem para entrar?
+        1 - Entro na caverna
+        2 - Saio da floresta`);
+  if (voliba == "1") {
+    const lutaVoliba =
+      prompt(`Quando você entra a entrada da caverna é bloqueada por uma parede de raios! E o GRANDIOSO VOLIBA DO BIGODON aparece!
+        1 - Tento lutar
+        2 - Tento fugir`);
+    if (lutaVoliba == "1") {
+      alert("Agora vamos ver se você é capaz!");
+      batalhaDificil();
+    } else if (lutaVoliba == "2") {
+      const rolarDados = confirm("Agora vamos ver se você é capaz!");
+      if (rolarDados === true) {
+        sorteioDado = rolarDado();
+        alert(`O número sorteado foi ${sorteioDado}!`);
+        if (sorteioDado >= 0 && sorteioDado <= 19) {
+          alert(`${VolibaC[0]}`);
+          batalhaDificil();
+        } else {
+          alert(`${VolibaC[1]}`);
+        }
+      }
+    }
+  } else {
+    alert(`Você sai da floresta e está livre.`);
+  }
+}
+
+//************************************* Função para iniciar a jornada da vingança do GA *************************************
+
+function vinganca() {
+  const inicioVinganca =
+    prompt(`Com raiva de quem te prendeu, você decide se vingar?
+        1 - Vou até a casa dele
+        2 - Vou só fugir mesmo`);
+  if (inicioVinganca == "1") {
+    alert(
+      "Você vai até a casa dele para sequestrar a família dele, mas o cachorro dele sabe lutar karate!"
+    );
+    batalhaFacil();
+    if (vivo) {
+      vinganca2();
+    }
+  } else {
+    alert(`Você escapou!`);
+    return;
+  }
+}
+
+function vinganca2() {
+  const vingancaRato =
+    prompt(`Após matar o cachorro que sabe lutar karate você decide procurar o guarda que te prendeu mas no meio do caminho você encontra um rato bonitinho e fofinho, MAS ELE TEM UM MACHADO GIGANTE e sabe lutar karate e ele vai proteger seu dono por tudo... o cachorro, sim, o cachorro é o dono do rato que sabe luta karate
+        1 - Você luta
+        2 - Você desiste`);
+  if (vingancaRato == "1") {
+    batalhaMedia();
+    if (vivo) {
+      vingancaGuardaGA();
+    }
+  } else {
+    alert(`Você foi humilhado por um rato, muito bem!`);
+    return;
+  }
+}
+
+function vingancaGuardaGA() {
+  const vingancaGuardaCC =
+    prompt(`Depois de passar pelo rato você encontra o guarda, que estava tomando sorvete e ele te percebe, mas ele tem um truque na manga... ELE SABE LUTAR KARATE! E mesmo assim ele te pede pra você escolher entre cara ou corou.
+        1 - Luto do mesmo jeito
+        2 - Escolho entre cara ou coroa`);
+  if (vingancaGuardaCC == "1") {
+    batalhaMediaM();
+    if (vivo) {
+      alert("Você se vinga com sucesso, parabéns!");
+      return;
+    }
+  } else if (vingancaGuardaCC == "2") {
+    const escolhaCaraCoroa = prompt(`Escolha entre Caro ou Coroa
+      1 - Cara
+      2 - Coroa
+      (Escreva: "Cara" ou "Coroa" sem as "" mas do mesmo jeito)`);
+    const resultadoCaraCoroa = gerarCaraCoroa();
+    alert(`O resultado foi ${resultadoCaraCoroa}!`);
+
+    if (resultadoCaraCoroa === escolhaCaraCoroa) {
+      alert(
+        "O guarda corta a cabeça dele com a moeda e vc se vinga com sucesso, parabéns!"
+      );
+    } else {
+      alert("O voliba aparece e você agora tem que lutar com ele!");
+      batalhaDificil();
+    }
+  } else {
+    alert("Então você morre.");
   }
 }
 
