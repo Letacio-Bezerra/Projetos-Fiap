@@ -48,18 +48,18 @@ const velhaCidadeC = [
 const velhaBatalha = [
   "A velha aceita sua batalha porque você tem cara de ser bucha",
   "Ela te acha meio estranho e deseja batalhar",
-  "A velha acha que você é tão bucha que nem vale a pena lutar com você"
+  "A velha acha que você é tão bucha que nem vale a pena lutar com você",
 ];
 
 const guardaBatalha = [
   "Eles consiguiram te ver por você não ter aprendido a tecnica do sensei tekomi nakama",
-  "Você faz igual meu pai e consegue ficar invisivel para eles"
+  "Você faz igual meu pai e consegue ficar invisivel para eles",
 ];
 
 const reiBatalha = [
   "Ele saca sua espada meio velha para lutar",
   "Sua espada fica maior e mais forte, ele te chama para a batalha",
-  "Parabéns você o derrotou..."
+  "Parabéns você o derrotou...",
 ];
 
 //************************************* Funções que serão repetidas ao longo do jogo *************************************
@@ -631,8 +631,7 @@ function cidade() {
 }
 
 function cidade() {
-  const velhaCidade =
-    prompt(`Você acha uma idosa na rua, você pede informação?
+  const velhaCidade = prompt(`Você acha uma idosa na rua, você pede informação?
         1 - Sim
         2 - Não`);
   if (velhaCidade == "1") {
@@ -642,7 +641,7 @@ function cidade() {
       alert(`O número sorteado foi ${sorteioDado}!`);
       if (sorteioDado >= 0 && sorteioDado <= 5) {
         alert(`${velhaCidadeC[0]}`);
-        batalhaFacil()
+        batalhaFacil();
       } else {
         alert(`${velhaCidadeC[1]}`);
       }
@@ -662,7 +661,9 @@ function cidadeP2() {
         2 - Eu tenho amor por velhas e deixo ela bater em mim até a morte...`);
 
   if (cidadeInfoC == "1") {
-    const rolarDados = confirm("Agora vamos ver se você é capaz de bater em VELHAS!");
+    const rolarDados = confirm(
+      "Agora vamos ver se você é capaz de bater em VELHAS!"
+    );
     if (rolarDados) {
       const sorteioDado = rolarDado();
       alert(`O número sorteado foi ${sorteioDado}!`);
@@ -682,7 +683,9 @@ function cidadeP2() {
       mateiVelhaGA();
     }
   } else {
-    alert("A velha é muito melhor que você e você é espancado por uma bolsa de velha cheio de coisa de velha e com cheiro de velha por uma velha até a morte feita de uma velha velha");
+    alert(
+      "A velha é muito melhor que você e você é espancado por uma bolsa de velha cheio de coisa de velha e com cheiro de velha por uma velha até a morte feita de uma velha velha"
+    );
   }
 }
 
@@ -691,26 +694,30 @@ function mateiVelhaGA() {
     prompt(`Você vai até o castelo do rei, onde você encontra guardas
         1 - Tentar passar despercebido
         2 - lutar`);
-        if (guarda == "1") {
-          const rolarDados = confirm("Será que você dominou as tecnicas do sensei tekomi nakama de ficar impercebivel");
-          if (rolarDados) {
-            const sorteioDado = rolarDado();
-            alert(`O número sorteado foi ${sorteioDado}!`);
-      
-            if (sorteioDado >= 0 && sorteioDado <= 9) {
-              alert(`${guardaBatalha[0]}`);
-              batalhaMedia();
-            } else {
-              alert(`${guardaBatalha[1]}`);
-            }
-          }
-      
-          if (vivo) {
-            lutaRei();
-          }
-        } else {
-          alert("Você não tem medo de nada então os guardas aceitam a sua batalha em proteção ao rei");
-        }
+  if (guarda == "1") {
+    const rolarDados = confirm(
+      "Será que você dominou as tecnicas do sensei tekomi nakama de ficar impercebivel"
+    );
+    if (rolarDados) {
+      const sorteioDado = rolarDado();
+      alert(`O número sorteado foi ${sorteioDado}!`);
+
+      if (sorteioDado >= 0 && sorteioDado <= 9) {
+        alert(`${guardaBatalha[0]}`);
+        batalhaMedia();
+      } else {
+        alert(`${guardaBatalha[1]}`);
+      }
+    }
+
+    if (vivo) {
+      lutaRei();
+    }
+  } else {
+    alert(
+      "Você não tem medo de nada então os guardas aceitam a sua batalha em proteção ao rei"
+    );
+  }
 }
 
 function lutaRei() {
@@ -718,31 +725,35 @@ function lutaRei() {
     prompt(`Você consegue entrar no castelo do rei e entra no quarto dele, onde ele estava tomando banho
         1 - Desafiar rei pelado
         2 - Fechar os olhos e sair pela porta`);
-        if (rei == "1") {
-          const rolarDados = confirm("O rei te acha meio estranho por fazer isso mas ele aceita e luta com sua ''espadonaaaaa''");
-          if (rolarDados) {
-            const sorteioDado = rolarDado();
-            alert(`O número sorteado foi ${sorteioDado}!`);
-      
-            if (sorteioDado >= 10 && sorteioDado <= 20) {
-              alert(`${reiBatalha[0]}`);
-              batalhaFacil();
-            }
+  if (rei == "1") {
+    const rolarDados = confirm(
+      "O rei te acha meio estranho por fazer isso mas ele aceita e luta com sua ''espadonaaaaa''"
+    );
+    if (rolarDados) {
+      const sorteioDado = rolarDado();
+      alert(`O número sorteado foi ${sorteioDado}!`);
 
-            if (sorteioDado >= 0 && sorteioDado <= 9) {
-              alert(`${reiBatalha[1]}`);
-              batalhaMedia();
-            } else {
-              alert(`${reiBatalha[2]}`);
-            }
-          }
-      
-          if (vivo) {
-          alert("Você virou o novo rei e prendeu todos no mundo. Fim...");
-          }
-        } else {
-          alert("Quando você virou de costas o rei aproveitou e te matou, suas ultimas palavras foram: ''Eu podia ter morrido com uma visão melhor...''");
-        }
+      if (sorteioDado >= 10 && sorteioDado <= 20) {
+        alert(`${reiBatalha[0]}`);
+        batalhaFacil();
+      }
+
+      if (sorteioDado >= 0 && sorteioDado <= 9) {
+        alert(`${reiBatalha[1]}`);
+        batalhaMedia();
+      } else {
+        alert(`${reiBatalha[2]}`);
+      }
+    }
+
+    if (vivo) {
+      alert("Você virou o novo rei e prendeu todos no mundo. Fim...");
+    }
+  } else {
+    alert(
+      "Quando você virou de costas o rei aproveitou e te matou, suas ultimas palavras foram: ''Eu podia ter morrido com uma visão melhor...''"
+    );
+  }
 }
 
 //************************************* Função para iniciar a jornada do mago *************************************
@@ -982,8 +993,7 @@ function CidadeMago() {
 }
 
 function CidadeMago() {
-  const velhaCidade =
-    prompt(`Você acha uma idosa na rua, você pede informação?
+  const velhaCidade = prompt(`Você acha uma idosa na rua, você pede informação?
         1 - Sim
         2 - Não`);
   if (velhaCidade == "1") {
@@ -993,7 +1003,7 @@ function CidadeMago() {
       alert(`O número sorteado foi ${sorteioDado}!`);
       if (sorteioDado >= 0 && sorteioDado <= 5) {
         alert(`${velhaCidadeC[0]}`);
-        batalhaFacilM()
+        batalhaFacilM();
       } else {
         alert(`${velhaCidadeC[1]}`);
       }
@@ -1013,7 +1023,9 @@ function CidadeMagoP2() {
         2 - Eu tenho amor por velhas e deixo ela bater em mim até a morte...`);
 
   if (cidadeInfoC == "1") {
-    const rolarDados = confirm("Agora vamos ver se você é capaz de bater em VELHAS!");
+    const rolarDados = confirm(
+      "Agora vamos ver se você é capaz de bater em VELHAS!"
+    );
     if (rolarDados) {
       const sorteioDado = rolarDado();
       alert(`O número sorteado foi ${sorteioDado}!`);
@@ -1033,7 +1045,9 @@ function CidadeMagoP2() {
       mateiVelha();
     }
   } else {
-    alert("A velha é muito melhor que você e você é espancado por uma bolsa de velha cheio de coisa de velha e com cheiro de velha por uma velha até a morte feita de uma velha velha");
+    alert(
+      "A velha é muito melhor que você e você é espancado por uma bolsa de velha cheio de coisa de velha e com cheiro de velha por uma velha até a morte feita de uma velha velha"
+    );
   }
 }
 
@@ -1042,26 +1056,30 @@ function mateiVelha() {
     prompt(`Você vai até o castelo do rei, onde você encontra guardas
         1 - Tentar passar despercebido
         2 - lutar`);
-        if (guarda == "1") {
-          const rolarDados = confirm("Será que você dominou as tecnicas do sensei tekomi nakama de ficar impercebivel");
-          if (rolarDados) {
-            const sorteioDado = rolarDado();
-            alert(`O número sorteado foi ${sorteioDado}!`);
-      
-            if (sorteioDado >= 0 && sorteioDado <= 9) {
-              alert(`${guardaBatalha[0]}`);
-              batalhaMediaM();
-            } else {
-              alert(`${guardaBatalha[1]}`);
-            }
-          }
-      
-          if (vivo) {
-            lutaReiMago();
-          }
-        } else {
-          alert("Você não tem medo de nada então os guardas aceitam a sua batalha em proteção ao rei");
-        }
+  if (guarda == "1") {
+    const rolarDados = confirm(
+      "Será que você dominou as tecnicas do sensei tekomi nakama de ficar impercebivel"
+    );
+    if (rolarDados) {
+      const sorteioDado = rolarDado();
+      alert(`O número sorteado foi ${sorteioDado}!`);
+
+      if (sorteioDado >= 0 && sorteioDado <= 9) {
+        alert(`${guardaBatalha[0]}`);
+        batalhaMediaM();
+      } else {
+        alert(`${guardaBatalha[1]}`);
+      }
+    }
+
+    if (vivo) {
+      lutaReiMago();
+    }
+  } else {
+    alert(
+      "Você não tem medo de nada então os guardas aceitam a sua batalha em proteção ao rei"
+    );
+  }
 }
 
 function lutaReiMago() {
@@ -1069,29 +1087,33 @@ function lutaReiMago() {
     prompt(`Você consegue entrar no castelo do rei e entra no quarto dele, onde ele estava tomando banho
         1 - Desafiar rei pelado
         2 - Fechar os olhos e sair pela porta`);
-        if (rei == "1") {
-          const rolarDados = confirm("O rei te acha meio estranho por fazer isso mas ele aceita e luta com sua ''espadonaaaaa''");
-          if (rolarDados) {
-            const sorteioDado = rolarDado();
-            alert(`O número sorteado foi ${sorteioDado}!`);
-      
-            if (sorteioDado >= 10 && sorteioDado <= 20) {
-              alert(`${reiBatalha[0]}`);
-              batalhaFacilM();
-            }
+  if (rei == "1") {
+    const rolarDados = confirm(
+      "O rei te acha meio estranho por fazer isso mas ele aceita e luta com sua ''espadonaaaaa''"
+    );
+    if (rolarDados) {
+      const sorteioDado = rolarDado();
+      alert(`O número sorteado foi ${sorteioDado}!`);
 
-            if (sorteioDado >= 0 && sorteioDado <= 9) {
-              alert(`${reiBatalha[1]}`);
-              batalhaMediaM();
-            } else {
-              alert(`${reiBatalha[2]}`);
-            }
-          }
-      
-          if (vivo) {
-          alert("Você virou o novo rei e prendeu todos no mundo. Fim...");
-          }
-        } else {
-          alert("Quando você virou de costas o rei aproveitou e te matou, suas ultimas palavras foram: ''Eu podia ter morrido com uma visão melhor...''");
-        }
+      if (sorteioDado >= 10 && sorteioDado <= 20) {
+        alert(`${reiBatalha[0]}`);
+        batalhaFacilM();
+      }
+
+      if (sorteioDado >= 0 && sorteioDado <= 9) {
+        alert(`${reiBatalha[1]}`);
+        batalhaMediaM();
+      } else {
+        alert(`${reiBatalha[2]}`);
+      }
+    }
+
+    if (vivo) {
+      alert("Você virou o novo rei e prendeu todos no mundo. Fim...");
+    }
+  } else {
+    alert(
+      "Quando você virou de costas o rei aproveitou e te matou, suas ultimas palavras foram: ''Eu podia ter morrido com uma visão melhor...''"
+    );
+  }
 }
