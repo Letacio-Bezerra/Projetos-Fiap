@@ -12,5 +12,12 @@ body{
 
 .cards{
     display: grid;
-    grid-template-columns: 2fr;
+    grid-template-columns: repeat(2,1fr) ;
+    grid-template-rows: auto 1fr auto auto;
+}
+
+img{
+    border: 10px solid rgba(29, 107, 103, 1);
+    border-radius: 110px;
+    box-shadow: 10px solid black;
 }
