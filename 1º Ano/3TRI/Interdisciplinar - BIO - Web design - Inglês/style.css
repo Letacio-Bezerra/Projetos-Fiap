@@ -3,21 +3,43 @@ body{
     color: white;
 }
 
-.titulo{
+.titulo {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
+.titulo h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.titulo a {
+    margin-left: auto;
+    margin-right: 20px;
+}
 .cards{
     display: grid;
     grid-template-columns: repeat(2,1fr) ;
     grid-template-rows: auto 1fr auto auto;
 }
 
-img{
+.card-img img{
     border: 10px solid rgba(29, 107, 103, 1);
     border-radius: 110px;
-    box-shadow: 10px solid black;
+    box-shadow: 10px 10px 5px rgba(20, 71, 69, 1);
+    margin: 7% 0%;
+}
+
+.card{
+    background-color: rgba(29, 107, 103, 1);
+    box-shadow: 10px 10px 5px rgba(20, 71, 69, 1);
+    border-radius: 30px;
+    width: 90%;
+    height: 50%;
+    padding: 3%;
+    margin: 7% 0%;
+    font-size: 1.1em;
 }
