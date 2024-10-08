@@ -1,0 +1,49 @@
+body{
+    background: rgba(0, 35, 51, 1);
+}
+
+header{
+    background: rgba(21, 154, 156, 1);
+    color: rgba(207, 207, 207, 1);
+}
+
+.containerHeader{
+    display: flex;
+    justify-content: space-around;
+}
+
+.links{
+    display: flex;
+    gap: 10%;
+}
+
+.logo{
+    background-color: rgba(207, 207, 207, 1);
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+}
+
+.containerMain{
+    color: rgba(222, 239, 231, 1);
+    display: flex;
+    gap: 5%;
+}
+
+.imgIntro{
+    background-color: rgba(207, 207, 207, 1);
+    width: 60%;
+    height: 35vh;
+}
+
+.textoInto{
+    width: 40%;
+}
+
+button{
+    color: rgba(222, 239, 231, 1);
+}
+
+.btn-cadastro{
+    background-color: rgba(21, 154, 156, 1);
+}
