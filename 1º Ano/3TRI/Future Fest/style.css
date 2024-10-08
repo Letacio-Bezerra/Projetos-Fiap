@@ -1,49 +1,182 @@
-body{
-    background: rgba(0, 35, 51, 1);
+body {
+  background: rgba(0, 35, 51, 1);
+  font-family: inter;
 }
 
-header{
-    background: rgba(21, 154, 156, 1);
-    color: rgba(207, 207, 207, 1);
+body p{
+  font-size: 1.3em;
 }
 
-.containerHeader{
-    display: flex;
-    justify-content: space-around;
+body h2{
+  font-size: 2em;
 }
 
-.links{
-    display: flex;
-    gap: 10%;
+header {
+  background: rgba(21, 154, 156, 1);
+  color: rgba(207, 207, 207, 1);
 }
 
-.logo{
-    background-color: rgba(207, 207, 207, 1);
-    width: 74px;
-    height: 74px;
-    border-radius: 50%;
+.containerHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.containerMain{
-    color: rgba(222, 239, 231, 1);
-    display: flex;
-    gap: 5%;
+.links {
+  display: flex;
+  gap: 5%;
+  font-size: 1.2em;
 }
 
-.imgIntro{
-    background-color: rgba(207, 207, 207, 1);
-    width: 60%;
-    height: 35vh;
+.logo {
+  background-color: rgba(207, 207, 207, 1);
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
 }
 
-.textoInto{
-    width: 40%;
+.containerIntro {
+  color: rgba(222, 239, 231, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5%;
+  margin: 5%;
 }
 
-button{
-    color: rgba(222, 239, 231, 1);
+.imgIntro {
+  background-color: rgba(207, 207, 207, 1);
+  width: 40%;
+  height: 35vh;
 }
 
-.btn-cadastro{
-    background-color: rgba(21, 154, 156, 1);
+.textoInto {
+  width: 40%;
+}
+
+button {
+  color: rgba(222, 239, 231, 1);
+}
+
+.cadastro {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.btn-cadastrar {
+  width: 40%;
+  height: 8vh;
+  font-size: 1.2em;
+  background-color: rgba(21, 154, 156, 1);
+  border: 5px solid rgba(19, 112, 114, 1);
+  border-radius: 10px;
+}
+
+.btn-entrar {
+  width: 40%;
+  height: 8vh;
+  font-size: 1.2em;
+  background-color: rgba(180, 190, 201, 1);
+  border: 5px solid rgba(140, 147, 155, 1);
+  border-radius: 10px;
+}
+
+.funcs {
+  color: rgba(222, 239, 231, 1);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5%;
+  margin: 5%;
+}
+
+.imgFunc {
+  background-color: rgba(207, 207, 207, 1);
+  width: 40%;
+  height: 35vh;
+}
+
+.textoFunc {
+  width: 40%;
+}
+
+.titleFunc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(222, 239, 231, 1);
+  background: rgba(21, 154, 156, 1);
+  width: 60%;
+  height: 10vh;
+  border-radius: 0px 10px 10px 0px;
+  font-size: 2em;
+}
+
+.chatBot {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: rgba(222, 239, 231, 1);
+}
+
+.chatBot h2 {
+  font-size: 2em;
+}
+
+.textLine {
+  font-style: italic;
+  text-decoration: underline;
+  color: rgba(21, 154, 156, 1);
+}
+
+.titleCor1 {
+  color: rgba(21, 154, 156, 1);
+}
+
+.textoChat,
+.textoAdap,
+.textoProf,
+.textoRec,
+.imgRec {
+  width: 40%;
+}
+
+.imgRec img{
+  width: 100%;
+  border: 10px solid rgba(21, 154, 156, 1);
+  border-radius: 10%;
+}
+
+.rec{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5%;
+}
+
+footer{
+  background: rgba(21, 154, 156, 1);
+  width: 100%;
+}
+
+.containerFooter{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 5%;
+}
+
+.cadastroF{
+  display: flex;
+  gap: 20%;
+  color: rgba(222, 239, 231, 1);
+  transform: translateX(-100%);
+}
+
+.contato{
+  transform: translateX(180%);
 }
