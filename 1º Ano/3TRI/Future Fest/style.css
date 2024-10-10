@@ -1,6 +1,10 @@
+a{
+  text-decoration: none;
+}
+
 body {
   background: rgba(0, 35, 51, 1);
-  font-family: inter;
+  font-family: "Inter";
 }
 
 body p{
@@ -29,6 +33,10 @@ header {
   font-size: 1.2em;
 }
 
+.links a{
+  color: rgb(230, 230, 230);
+}
+
 .logo {
   background-color: rgba(207, 207, 207, 1);
   width: 74px;
@@ -47,9 +55,12 @@ header {
 }
 
 .imgIntro {
-  background-color: rgba(207, 207, 207, 1);
   width: 40%;
   height: 35vh;
+}
+
+.imgIntro img{
+  width: 100%;
 }
 
 .textoInto {
@@ -75,6 +86,11 @@ button {
   border-radius: 10px;
 }
 
+.btn-cadastrar:hover{
+  background-color: rgb(26, 174, 177);
+  cursor: pointer;
+}
+
 .btn-entrar {
   width: 40%;
   height: 8vh;
@@ -82,6 +98,11 @@ button {
   background-color: rgba(180, 190, 201, 1);
   border: 5px solid rgba(140, 147, 155, 1);
   border-radius: 10px;
+}
+
+.btn-entrar:hover{
+  background-color: rgb(157, 166, 177);
+  cursor: pointer;
 }
 
 .funcs {
@@ -94,9 +115,12 @@ button {
 }
 
 .imgFunc {
-  background-color: rgba(207, 207, 207, 1);
   width: 40%;
   height: 35vh;
+}
+
+.imgFunc img{
+  width: 100%;
 }
 
 .textoFunc {
@@ -168,6 +192,7 @@ footer{
   align-items: center;
   flex-wrap: wrap;
   margin-top: 5%;
+  height: 10vh;
 }
 
 .cadastroF{
@@ -177,6 +202,44 @@ footer{
   transform: translateX(-100%);
 }
 
+.cadastroF a{
+  font-size: 1.3em;
+  color: rgb(230, 230, 230);
+}
+
 .contato{
   transform: translateX(180%);
+}
+
+.equipe h2{
+  margin-top: 5%;
+  text-align: center;
+  color: rgb(222, 239, 231, 1);
+}
+
+.equipeF{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  color: rgb(222, 239, 231, 1);
+}
+
+.equipeF h3{
+  font-size: 1.6em;
+}
+
+.equipeF p{
+  color: rgba(21, 154, 156, 1);
+}
+
+.equipe{
+  display: flex;
+  flex-direction: column;
+}
+
+.imgEqp{
+  background: lightblue;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
 }
