@@ -86,6 +86,11 @@ button {
   border-radius: 10px;
 }
 
+.btn-cadastrar a{
+  text-decoration: none;
+  color: rgba(222, 239, 231, 1);
+}
+
 .btn-cadastrar:hover{
   background-color: rgb(26, 174, 177);
   cursor: pointer;
@@ -98,6 +103,11 @@ button {
   background-color: rgba(180, 190, 201, 1);
   border: 5px solid rgba(140, 147, 155, 1);
   border-radius: 10px;
+}
+
+.btn-entrar a{
+  text-decoration: none;
+  color: rgba(222, 239, 231, 1);
 }
 
 .btn-entrar:hover{

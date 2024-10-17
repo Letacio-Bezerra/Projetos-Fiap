@@ -1,0 +1,78 @@
+a{
+    text-decoration: none;
+  }
+  
+  body {
+    background: rgba(0, 35, 51, 1);
+    font-family: "Inter";
+    color: rgba(207, 207, 207, 1);
+  }
+  
+  body p{
+    font-size: 1.3em;
+  }
+  
+  body h2{
+    font-size: 2em;
+  }
+
+  .textLine {
+    font-style: italic;
+    text-decoration: underline;
+    color: rgba(21, 154, 156, 1);
+  }
+  
+  header {
+    background: rgba(21, 154, 156, 1);
+    color: rgba(207, 207, 207, 1);
+  }
+  
+  .containerHeader {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  .links {
+    display: flex;
+    gap: 5%;
+    font-size: 1.2em;
+  }
+  
+  .links a{
+    color: rgb(230, 230, 230);
+  }
+  
+  .logo {
+    background-color: rgba(207, 207, 207, 1);
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+  }
+
+  footer{
+    background: rgba(21, 154, 156, 1);
+    width: 100%;
+  }
+  
+  .containerFooter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    height: 10vh;
+  }
+
+  .cadastroF{
+    display: flex;
+    gap: 20%;
+    color: rgba(222, 239, 231, 1);
+    transform: translateX(-100%);
+  }
+  
+  .cadastroF a{
+    font-size: 1.3em;
+    color: rgb(230, 230, 230);
+  }
