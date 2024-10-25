@@ -1,0 +1,17 @@
+.bola{
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+    border-radius: 10%;
+    animation-name: girar;
+    animation-duration: 2s;
+}
+ 
+@keyframes girar {
+    0% {
+      transform: rotate(0deg)
+    }
+    100% {
+      transform: rotate(-90deg)
+    }
+  }

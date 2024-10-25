@@ -1,0 +1,20 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 480px;
+    height: 480px;
+}
+
+.um {
+    background-color: aquamarine;
+}
+.dois{
+    background-color: aqua;
+}

@@ -1,0 +1,19 @@
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr auto fill;
+    width: 100%;
+    height: 100vh;
+}
+
+.um {
+    background-color: aquamarine;
+}
+.dois{
+    background-color: aqua;
+}
+.tres{
+    background-color: blue;
+}
+.quatro{
+    background-color: blueviolet;
+}

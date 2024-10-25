@@ -1,0 +1,65 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto fill;
+    grid-template-rows: 1fr 1fr 1fr auto fill;
+    width: 480px;
+    height: 480px;
+    gap: 10px;
+}
+
+.um, .dois, .tres{
+    grid-row: 1 / 2;
+}
+
+.um {
+    width: 150px;
+    height: 150px;
+    background-color: aquamarine;
+}
+.dois{
+    width: 150px;
+    height: 150px;
+    background-color: aqua;
+}
+.tres{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+}
+.quatro{
+    width: 150px;
+    height: 150px;
+    background-color: blueviolet;
+}
+.cinco{
+    width: 150px;
+    height: 150px;
+    background-color: black;
+}
+.seis{
+    width: 150px;
+    height: 150px;
+    background-color: blanchedalmond;
+}
+.sete{
+    width: 150px;
+    height: 150px;
+    background-color: brown;
+}
+.oito{
+    width: 150px;
+    height: 150px;
+    background-color: yellow;
+}
+.nove{
+    width: 150px;
+    height: 150px;
+    background-color: forestgreen;
+}
