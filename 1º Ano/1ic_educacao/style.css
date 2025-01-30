@@ -1,0 +1,376 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: rgba(0, 35, 51, 1);
+  font-family: "Inter";
+}
+
+body p {
+  font-size: 1.3em;
+}
+
+body h2 {
+  font-size: 2em;
+}
+
+header {
+  background: rgba(21, 154, 156, 1);
+  color: rgba(207, 207, 207, 1);
+}
+
+.imgFunc img,
+.imgIntro img{
+  border: 5px solid rgb(17, 124, 125);
+}
+
+.containerHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.links {
+  display: flex;
+  gap: 15%;
+  font-size: 1.2em;
+}
+
+.links a {
+  color: rgb(230, 230, 230);
+}
+
+.logo {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+}
+
+#logo{
+  width: 100%;
+}
+
+.containerIntro {
+  color: rgba(222, 239, 231, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5%;
+  margin: 5%;
+}
+
+.imgIntro {
+  width: 40%;
+  height: 35vh;
+}
+
+.imgIntro img {
+  width: 100%;
+}
+
+.textoInto {
+  width: 40%;
+}
+
+button {
+  color: rgba(222, 239, 231, 1);
+}
+
+.cadastro {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.btn-cadastrar {
+  width: 40%;
+  height: 8vh;
+  font-size: 1.2em;
+  background-color: rgba(21, 154, 156, 1);
+  border: 5px solid rgba(19, 112, 114, 1);
+  border-radius: 10px;
+}
+
+.btn-cadastrar a {
+  text-decoration: none;
+  color: rgba(222, 239, 231, 1);
+}
+
+.btn-cadastrar:hover, .btn-entrar:hover {
+  background-color: rgb(26, 174, 177);
+  cursor: pointer;
+}
+
+.btn-entrar {
+  width: 40%;
+  height: 8vh;
+  font-size: 1.2em;
+  background-color: rgba(21, 154, 156, 1);
+  border: 5px solid rgba(19, 112, 114, 1);
+  border-radius: 10px;
+}
+
+.btn-entrar a {
+  text-decoration: none;
+  color: rgba(222, 239, 231, 1);
+}
+
+.funcs {
+  color: rgba(222, 239, 231, 1);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5%;
+  margin: 5%;
+  padding: 2%;
+}
+
+.imgFunc {
+  width: 40%;
+  height: 35vh;
+}
+
+.imgFunc img {
+  width: 100%;
+}
+
+.textoFunc {
+  width: 40%;
+}
+
+.titleFunc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(222, 239, 231, 1);
+  background: rgba(21, 154, 156, 1);
+  width: 60%;
+  height: 10vh;
+  border-radius: 0px 10px 10px 0px;
+  font-size: 2em;
+}
+
+.chatBot {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: rgba(222, 239, 231, 1);
+  padding: 1%;
+}
+
+.chatBot h2 {
+  font-size: 2em;
+}
+
+.textLine {
+  font-style: italic;
+  text-decoration: underline;
+  color: rgba(21, 154, 156, 1);
+}
+
+.titleCor1 {
+  color: rgba(21, 154, 156, 1);
+}
+
+.textoChat,
+.textoAdap,
+.textoProf,
+.textoRec,
+.imgRec {
+  width: 40%;
+}
+
+.imgRec img {
+  width: 100%;
+  border: 10px solid rgba(21, 154, 156, 1);
+  border-radius: 10%;
+}
+
+.rec {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5%;
+}
+
+footer {
+  background: rgba(21, 154, 156, 1);
+  width: 100%;
+}
+
+.containerFooter {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 5%;
+  height: 10vh;
+}
+
+.cadastroF {
+  display: flex;
+  gap: 20%;
+  color: rgba(222, 239, 231, 1);
+  transform: translateX(-100%);
+}
+
+.cadastroF a {
+  font-size: 1.3em;
+  color: rgb(230, 230, 230);
+}
+
+.contato {
+  transform: translateX(180%);
+}
+
+.equipe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5% auto;
+  color: rgba(222, 239, 231, 1);
+}
+
+.equipe h2 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  color: rgba(21, 154, 156, 1);
+}
+
+.equipeF {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.part {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 35%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.part:hover {
+  transform: scale(1.05);
+}
+
+.imgEqp {
+  background: lightblue;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px;
+}
+
+.imgEqp img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.equipeF h3 {
+  font-size: 1.8em;
+  margin: 10px 0;
+}
+
+.equipeF p {
+  color: rgba(21, 154, 156, 1);
+  font-size: 1.2em;
+}
+
+#textoEquipe{
+  color: white;
+  font-size: 1em;
+  width: 60%;
+}
+
+
+.inicio{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
+  background: url(fundoInicio.png);
+  border-bottom: 20px solid rgba(21, 154, 156, 1);
+  color: white;
+}
+
+.inicioInfos{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 10px;
+  margin-top: -5%;
+}
+
+.inicioInfos h1{
+  font-size: 5em;
+}
+
+.inicioInfos h2{
+  font-size: 1.5em;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.titulo{
+  margin-top: -15%;
+  margin-bottom: 10%;
+}
+
+.cadastro {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.btn-cadastrar {
+  width: 45%;
+  height: 8vh;
+  font-size: 1.2em;
+  background-color: rgba(21, 154, 156, 1);
+  border: 5px solid rgba(19, 112, 114, 1);
+  border-radius: 10px;
+}
+
+.btn-cadastrar a {
+  text-decoration: none;
+  color: rgba(222, 239, 231, 1);
+}
+
+.btn-cadastrar:hover, .btn-entrar:hover {
+  background-color: rgb(26, 174, 177);
+  cursor: pointer;
+}
+
+.btn-entrar {
+  width: 45%;
+  height: 8vh;
+  font-size: 1.2em;
+  background-color: rgba(21, 154, 156, 1);
+  border: 5px solid rgba(19, 112, 114, 1);
+  border-radius: 10px;
+}
+
+.btn-entrar a {
+  text-decoration: none;
+  color: rgba(222, 239, 231, 1);
+}
